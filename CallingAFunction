@@ -1,0 +1,18 @@
+function sayThanks() {
+  console.log('Thank you for your purchase! We appreciate your business.')
+
+} //the thanks function
+
+//this code is quite boring, and is similar to before, so let's make it somewhat interesting. Let's add a silly function too.
+
+function voucherAnnoyance(){
+  console.log('It would be nice if you had not used a voucher...')
+}
+
+let customer = true;
+let voucher = false;
+
+customer ? sayThanks() : console.log('Check out our latest deals!');
+voucher ? voucherAnnoyance() : console.log('');
+
+//Something you probably won't see, but I imagine business thinks!
