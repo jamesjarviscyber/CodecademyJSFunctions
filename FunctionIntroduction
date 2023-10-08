@@ -1,0 +1,28 @@
+function getReminder() {
+console.log('Water the plants.')
+}
+//System reminder
+
+function greetInSpanish() {
+console.log('Buenas tardes.')
+} //Random spanish
+//Codecademy task
+
+//fake scenario I created to test understanding, including previous conditionals.
+let sadPlants = false;
+let spanishFriend = true;
+
+if(spanishFriend) {
+  greetInSpanish();
+} else {
+  console.log('yo dude') //english vs spanish conditional
+}
+
+
+if(sadPlants) {
+  getReminder();
+} else {
+  console.log('The plants are happy!') //happy and sad plant conditional
+} 
+
+
