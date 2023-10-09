@@ -1,0 +1,13 @@
+const storeName = 'The Cool James Store';
+
+console.log(`Welcome to ${storeName}!`)
+console.log('')
+
+//Set Task
+function sayThanks(name) {
+  console.log('Thank you for your purchase '+ name + '! We appreciate your business.');
+}
+
+sayThanks('Cole');
+//End of Task
+console.log('We hope to see you again soon!')
