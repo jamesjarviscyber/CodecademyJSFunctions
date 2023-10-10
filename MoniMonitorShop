@@ -1,0 +1,19 @@
+//Helper Functions, codecademy + personal extension/personalisation
+
+let storeName = 'Moni\'s Monitors';
+console.log(`Welcome to ${storeName}!`)
+
+let monitorSelection = 'Standard Model #3';
+
+console.log(`You have selected ${monitorSelection}.`)
+
+function monitorCount(rows, columns) { //montior count
+  return rows * columns;
+}
+function costOfMonitors(rows, columns) {
+  return monitorCount(rows,columns) * 200; //monitor count * monitor cost
+}
+const totalCost = costOfMonitors(5,4); //cost based on monitor number
+
+console.log('The total cost is:'); 
+console.log(totalCost);//print cost total
