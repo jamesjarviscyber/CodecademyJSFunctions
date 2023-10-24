@@ -1,0 +1,86 @@
+//RockPaperScissors project
+console.log("Welcome to the Rock Paper Scissors World Championships!");
+
+//the user will define their input following usual RPS convention.
+const getUserChoice = (userInput) => {
+  userInput = userInput.toLowerCase();
+
+  if (
+    userInput === "rock" ||
+    userInput === "paper" ||
+    userInput === "scissors" ||
+    userInput === "bomb" //super secret cheat code
+  ) {
+    return userInput;
+  } else {
+    console.log("Error - Invalid option!"); //if RPC not chosen, error message.
+  }
+};
+
+//the computer gets a random generated number which determines its choice.
+const getComputerChoice = () => { 
+  randomNumber = Math.floor(Math.random() * 3);
+  switch (randomNumber) {
+    case 0:
+      return "rock";
+      break;
+    case 1:
+      return "paper";
+      break;
+    case 2:
+      return "scissors";
+      break;
+  }
+};
+
+//Deciding the winner
+const determineWinner = (userChoice, ComputerChoice) => { 
+  if(userChoice === ComputerChoice) {
+  return 'Draw!';
+  }
+  if(userChoice === 'rock'){
+    if(ComputerChoice === 'paper') {
+      return 'Computer wins!';
+    } else {
+      return 'Congratulations, victory is yours!'
+    }
+  }
+  if(userChoice === 'paper') {
+    if(ComputerChoice === 'scissors') {
+      return 'Computer wins!';
+    } else {
+      return 'Congratulations, victory is yours!'
+    }
+  }
+  if(userChoice === 'scissors') {
+    if(ComputerChoice === 'rock')
+      return 'Computer wins!';
+  } else {
+    return 'congratulations, victory is yours!'
+  }
+  if(userChoice === 'bomb') {
+return 'Congratulations, victory is yours!'
+  }
+};
+//the game variables
+const playGame = () => {
+  const userChoice = getUserChoice('bomb');
+  const computerChoice = getComputerChoice();
+  console.log('You played ' + userChoice);
+  console.log('The computer played ' + computerChoice);
+
+  console.log(determineWinner(userChoice, computerChoice));
+};
+
+playGame();
+
+
+
+
+
+
+
+
+
+
+
